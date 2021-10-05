@@ -1,14 +1,12 @@
-﻿using System.Collections.Generic;
-using Dapper.Contrib.Extensions;
+﻿using Dapper.Contrib.Extensions;
 
 namespace DataAccessSample.Models
 {
-    [Table("Category")]
-    public class Category
+    [Table("[Role]")]
+    public class Role
     {
         public int Id { get; set; }
         public string Name { get; set; }
         public string Slug { get; set; }
-        public List<Post> Posts { get; set; }
     }
 }
