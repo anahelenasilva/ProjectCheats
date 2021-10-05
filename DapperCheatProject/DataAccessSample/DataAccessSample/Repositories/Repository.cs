@@ -21,5 +21,11 @@ namespace DataAccessSample.Repositories
         public void Update(T model) => _connection.Update(model);
 
         public void Delete(T model) => _connection.Delete(model);
+
+        public void Delete(int id)
+        {
+            var model = _connection.Get<T>(id);
+            _connection.Delete<T>(model);
+        }
     }
 }
